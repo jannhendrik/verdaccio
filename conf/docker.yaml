@@ -12,7 +12,7 @@
 
 # path to a directory with all packages
 storage: /verdaccio/storage
-
+max_body_size: 1000mb
 auth:
   htpasswd:
     file: /verdaccio/conf/htpasswd
@@ -38,7 +38,7 @@ packages:
     #
     # you can specify usernames/groupnames (depending on your auth plugin)
     # and three keywords: "$all", "$anonymous", "$authenticated"
-    access: $all
+    access: $authenticated
 
     # allow all known users to publish packages
     # (anyone can register by default, remember?)
