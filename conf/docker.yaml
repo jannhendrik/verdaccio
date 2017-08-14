@@ -25,10 +25,12 @@ uplinks:
   npmjs:
     url: https://registry.npmjs.org/
 
+max_body_size: 1000mb
+
 packages:
   '@*/*':
     # scoped packages
-    access: $all
+    access: $authenticated
     publish: $authenticated
     proxy: npmjs
 
@@ -38,7 +40,7 @@ packages:
     #
     # you can specify usernames/groupnames (depending on your auth plugin)
     # and three keywords: "$all", "$anonymous", "$authenticated"
-    access: $all
+    access: $authenticated
 
     # allow all known users to publish packages
     # (anyone can register by default, remember?)
